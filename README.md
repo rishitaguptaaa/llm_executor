@@ -201,18 +201,4 @@ ValueError: Model not supported: your-model-name
 - Add more API keys to distribute load
 - Check provider status pages for outages
 
-## Contributing
-
-To add support for new models:
-
-1. Add the model to `MODEL_INFERENCE_PROVIDERS`:
-   ```python
-   MODEL_INFERENCE_PROVIDERS = {
-       "new-model": ["provider1", "provider2"],
-   }
-   ```
-
-2. Test with `run_llm("new-model", "test prompt")`
-
-3. Submit a PR with the changes
 
