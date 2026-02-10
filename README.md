@@ -174,27 +174,6 @@ OPENROUTER_KEYS = [os.getenv("OPENROUTER_KEY_1"), ...]
 HUGGINGFACE_TOKENS = [os.getenv("HF_TOKEN_1"), ...]
 ```
 
-## Security Notes
-
-⚠️ **Important**: Do not commit API keys to version control. Use environment variables or a `.env` file with proper gitignore configuration:
-
-```bash
-# .gitignore
-.env
-.env.local
-*_credentials.py
-```
-
-Load credentials securely:
-
-```python
-from dotenv import load_dotenv
-import os
-
-load_dotenv()
-OPENROUTER_KEYS = [os.getenv("OPENROUTER_KEY")]
-```
-
 ## Troubleshooting
 
 ### Model Not Supported Error
@@ -237,13 +216,3 @@ To add support for new models:
 
 3. Submit a PR with the changes
 
-## License
-
-MIT
-
-## Related Links
-
-- [LangChain Documentation](https://python.langchain.com/)
-- [OpenRouter API](https://openrouter.ai/docs)
-- [Hugging Face Inference](https://huggingface.co/docs/api-inference)
-- [Tenacity Retry Library](https://tenacity.readthedocs.io/)
